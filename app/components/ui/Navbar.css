@@ -1,0 +1,221 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-default);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-desktop {
+  display: none;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-mobile {
+  display: flex;
+  padding: 0.75rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-desktop {
+    display: flex;
+  }
+  .navbar-mobile {
+    display: none;
+  }
+}
+
+.navbar-brand,
+.navbar-brand-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-indigo-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar-logo-sm {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.navbar-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.navbar-roommates {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar-roommates {
+    display: inline;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar-nav-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-nav-btn:hover {
+  background: var(--bg-subtle);
+}
+
+.navbar-nav-btn-active {
+  background: var(--color-indigo-50);
+  color: var(--color-indigo-600);
+}
+
+.dark .navbar-nav-btn-active {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--color-indigo-300);
+}
+
+.navbar-nav-emoji {
+  margin-right: 0.375rem;
+}
+
+.navbar-icon-btn {
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.15s ease;
+}
+
+.navbar-icon-btn:hover {
+  background: var(--bg-subtle);
+}
+
+.navbar-icon-btn-sm {
+  padding: 0.4rem;
+}
+
+/* Connection badge */
+.conn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.conn-online {
+  background: var(--color-emerald-100);
+  color: var(--color-emerald-700);
+}
+.dark .conn-online {
+  background: rgba(5, 150, 105, 0.18);
+  color: #34d399;
+}
+
+.conn-offline {
+  background: var(--color-red-100);
+  color: var(--color-red-700);
+}
+.dark .conn-offline {
+  background: rgba(220, 38, 38, 0.18);
+  color: #f87171;
+}
+
+.conn-connecting {
+  background: var(--color-gray-100);
+  color: var(--text-secondary);
+}
+.dark .conn-connecting {
+  background: var(--bg-subtle);
+}
+
+.conn-label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .conn-label {
+    display: inline;
+  }
+}
+
+.conn-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Mobile bottom nav */
+.bottom-nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-default);
+  z-index: 50;
+}
+
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+.bottom-nav-btn {
+  flex: 1;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.bottom-nav-btn-active {
+  color: var(--color-indigo-600);
+}
+
+.dark .bottom-nav-btn-active {
+  color: var(--color-indigo-300);
+}
+
+.bottom-nav-emoji {
+  font-size: 1.125rem;
+  line-height: 1;
+}

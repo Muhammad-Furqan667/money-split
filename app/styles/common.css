@@ -1,0 +1,125 @@
+/* Shared primitives — page headers, buttons, cards, empty states.
+   Imported by Dashboard, AddExpenseForm, ExpenseHistory, Analytics,
+   and Settings so these patterns aren't redefined five times. */
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0.125rem 0 0;
+}
+
+.section-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--color-indigo-600);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--color-indigo-700);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-md);
+  transition: background-color 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+}
+
+.btn-text-desktop {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .btn-text-desktop {
+    display: inline;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-state {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-default);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.empty-emoji {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.empty-title {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.empty-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+}
+
+.empty-cta {
+  margin: 1rem auto 0;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-indigo-600);
+}
+
+.dark .link-btn {
+  color: var(--color-indigo-300);
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}

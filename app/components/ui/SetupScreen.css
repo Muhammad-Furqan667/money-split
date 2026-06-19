@@ -1,0 +1,104 @@
+.setup-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #faf5ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dark .setup-screen {
+  background: linear-gradient(135deg, #030712 0%, #111827 50%, #1e1b4b 100%);
+}
+
+.setup-container {
+  width: 100%;
+  max-width: 26rem;
+}
+
+.setup-brand {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.setup-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-indigo-600);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.35);
+  margin-bottom: 1rem;
+}
+
+.setup-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.setup-subtitle {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.setup-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  border: 1px solid var(--border-default);
+  animation: fadeIn 0.3s ease;
+}
+
+.setup-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem;
+}
+
+.setup-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.setup-submit-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-indigo-600);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.setup-submit-btn:hover {
+  background: var(--color-indigo-700);
+}
+
+.setup-submit-btn:active {
+  background: var(--color-indigo-800);
+  transform: scale(0.99);
+}
+
+.setup-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
